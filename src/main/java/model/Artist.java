@@ -51,6 +51,15 @@ public class Artist {
 		this.discs = discs;
 	}
 	
+	public Artist(String name, String nationality, String picture) {
+		
+		this.id = -1;
+		this.name = name;
+		this.nationality = nationality;
+		this.picture = picture;
+		this.discs = new ArrayList<Disc>();
+	}
+	
 	public Artist(Artist artist) {
 		this.id=artist.id;
 		this.name = artist.name;

@@ -4,12 +4,11 @@ import java.util.List;
 
 import model.Coment;
 
-public interface ComentDAO {
+public interface ComentDAO extends DAO {
 	
-	List<Coment> getAll();
+	List<Coment> getUserListComent();
+			
+	List<Coment> getComentAnswer();
 	
-	boolean delete();
-	boolean save();
-	boolean update();
 
 }
