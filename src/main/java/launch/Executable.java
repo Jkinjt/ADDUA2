@@ -34,6 +34,7 @@ public class Executable {
 	static void testUpdateArtist() {
 		ArtistDaoImpMariaDB a=new ArtistDaoImpMariaDB("Jose Mari","español","./foto");
 		a.getArtistById(7);
+		System.out.println(a.getId()+" "+a.getName());
 		a.setName("Leticia Sabater");
 		System.out.println(a.getName());
 		a.update();

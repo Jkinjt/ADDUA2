@@ -79,7 +79,6 @@ public class ArtistDaoImpMariaDB extends Artist implements AstistDAO {
 			}finally {
 				try {
 					ps.close();
-					con.close();
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -158,7 +157,6 @@ public class ArtistDaoImpMariaDB extends Artist implements AstistDAO {
 				}finally {
 					try {
 						ps.close();
-						con.close();
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -198,7 +196,7 @@ public class ArtistDaoImpMariaDB extends Artist implements AstistDAO {
 				try {
 					ps.close();
 					rs.close();
-					con.close();
+					
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -220,7 +218,7 @@ public class ArtistDaoImpMariaDB extends Artist implements AstistDAO {
 				ps.setInt(1,id);
 				rs=ps.executeQuery();
 				if(rs.next()) {
-					result=new Artist(rs.getInt("ID"),
+					result=new Artist(this.id=id,
 							rs.getString("nombre"),
 							rs.getString("nacionalidad"),
 							rs.getString("foto"));
@@ -232,7 +230,7 @@ public class ArtistDaoImpMariaDB extends Artist implements AstistDAO {
 				try {
 					ps.close();
 					rs.close();
-					con.close();
+					
 				}catch (SQLException e) {
 					// TODO: handle exception
 				}
